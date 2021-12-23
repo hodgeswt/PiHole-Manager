@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE9DC1CF277529D000479101 /* SwiftHole in Frameworks */ = {isa = PBXBuildFile; productRef = BE9DC1CE277529D000479101 /* SwiftHole */; };
+		BE9DC1D12775392500479101 /* DataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DC1D02775392500479101 /* DataView.swift */; };
+		BE9DC1D32775420C00479101 /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DC1D22775420C00479101 /* ControlView.swift */; };
+		BE9DC1D5277542AE00479101 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DC1D4277542AE00479101 /* TitleView.swift */; };
+		BED0BB922775246C0082BBF2 /* OverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED0BB912775246C0082BBF2 /* OverviewView.swift */; };
+		BED0BB95277525B50082BBF2 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = BED0BB94277525B50082BBF2 /* CodeScanner */; };
 		BEE85A7A277520B400BC1823 /* PiHole_ManagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE85A79277520B400BC1823 /* PiHole_ManagerApp.swift */; };
 		BEE85A7C277520B400BC1823 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE85A7B277520B400BC1823 /* ContentView.swift */; };
 		BEE85A7E277520B600BC1823 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEE85A7D277520B600BC1823 /* Assets.xcassets */; };
@@ -16,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE9DC1D02775392500479101 /* DataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataView.swift; sourceTree = "<group>"; };
+		BE9DC1D22775420C00479101 /* ControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlView.swift; sourceTree = "<group>"; };
+		BE9DC1D4277542AE00479101 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		BED0BB912775246C0082BBF2 /* OverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewView.swift; sourceTree = "<group>"; };
 		BEE85A76277520B400BC1823 /* PiHole Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PiHole Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEE85A79277520B400BC1823 /* PiHole_ManagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiHole_ManagerApp.swift; sourceTree = "<group>"; };
 		BEE85A7B277520B400BC1823 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -30,6 +40,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE9DC1CF277529D000479101 /* SwiftHole in Frameworks */,
+				BED0BB95277525B50082BBF2 /* CodeScanner in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,6 +51,8 @@
 		BEE85A6D277520B400BC1823 = {
 			isa = PBXGroup;
 			children = (
+				BE9DC1D4277542AE00479101 /* TitleView.swift */,
+				BE9DC1D22775420C00479101 /* ControlView.swift */,
 				BEE85A78277520B400BC1823 /* PiHole Manager */,
 				BEE85A77277520B400BC1823 /* Products */,
 			);
@@ -57,6 +71,8 @@
 			children = (
 				BEE85A79277520B400BC1823 /* PiHole_ManagerApp.swift */,
 				BEE85A7B277520B400BC1823 /* ContentView.swift */,
+				BED0BB912775246C0082BBF2 /* OverviewView.swift */,
+				BE9DC1D02775392500479101 /* DataView.swift */,
 				BEE85A7D277520B600BC1823 /* Assets.xcassets */,
 				BEE85A82277520B600BC1823 /* Persistence.swift */,
 				BEE85A84277520B600BC1823 /* PiHole_Manager.xcdatamodeld */,
@@ -89,6 +105,10 @@
 			dependencies = (
 			);
 			name = "PiHole Manager";
+			packageProductDependencies = (
+				BED0BB94277525B50082BBF2 /* CodeScanner */,
+				BE9DC1CE277529D000479101 /* SwiftHole */,
+			);
 			productName = "PiHole Manager";
 			productReference = BEE85A76277520B400BC1823 /* PiHole Manager.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +137,10 @@
 				Base,
 			);
 			mainGroup = BEE85A6D277520B400BC1823;
+			packageReferences = (
+				BED0BB93277525B50082BBF2 /* XCRemoteSwiftPackageReference "CodeScanner" */,
+				BE9DC1CD277529D000479101 /* XCRemoteSwiftPackageReference "SwiftHole" */,
+			);
 			productRefGroup = BEE85A77277520B400BC1823 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -143,10 +167,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE9DC1D12775392500479101 /* DataView.swift in Sources */,
 				BEE85A83277520B600BC1823 /* Persistence.swift in Sources */,
+				BED0BB922775246C0082BBF2 /* OverviewView.swift in Sources */,
 				BEE85A7C277520B400BC1823 /* ContentView.swift in Sources */,
 				BEE85A86277520B600BC1823 /* PiHole_Manager.xcdatamodeld in Sources */,
+				BE9DC1D32775420C00479101 /* ControlView.swift in Sources */,
 				BEE85A7A277520B400BC1823 /* PiHole_ManagerApp.swift in Sources */,
+				BE9DC1D5277542AE00479101 /* TitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +308,7 @@
 				DEVELOPMENT_TEAM = 7M53NGQ966;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera is needed to scan API key QR code";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -309,6 +338,7 @@
 				DEVELOPMENT_TEAM = 7M53NGQ966;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera is needed to scan API key QR code";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -349,6 +379,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BE9DC1CD277529D000479101 /* XCRemoteSwiftPackageReference "SwiftHole" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Bunn/SwiftHole";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		BED0BB93277525B50082BBF2 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BE9DC1CE277529D000479101 /* SwiftHole */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BE9DC1CD277529D000479101 /* XCRemoteSwiftPackageReference "SwiftHole" */;
+			productName = SwiftHole;
+		};
+		BED0BB94277525B50082BBF2 /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BED0BB93277525B50082BBF2 /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		BEE85A84277520B600BC1823 /* PiHole_Manager.xcdatamodeld */ = {

@@ -17,18 +17,94 @@ struct WhitelistView: View {
     
     @State var whitelist = [ListItem]()
     
+    @State var showAddDomain = false
+    @State var domain = ""
+    @State var exact = true
+    
     var body: some View {
-        VStack {
-            Text("Whitelist")
-                .font(.title)
-            List(whitelist, id: \.self) { item in
-                Text(item.domain)
+        GeometryReader { geometry in
+            VStack {
+                Text("Whitelist")
+                    .font(.title)
+                Spacer()
+                Button(action: {
+                    showAddDomain = true
+                }) {
+                    Text("Add Domain")
+                }
+                .frame(width: geometry.size.width * 0.925, height: 50)
+                .background(
+                    RoundedRectangle(cornerRadius: 35, style: .continuous)
+                        .fill(Color.blue)
+                )
+                .foregroundColor(.white)
+                .onTapGesture {
+                    showAddDomain = true
+                }
+                List(whitelist, id: \.self) { item in
+                    Text(item.domain)
+                }
+                .refreshable {
+                    fetch()
+                }
             }
         }
         .onAppear(perform: fetch)
+        .sheet(isPresented: $showAddDomain)  {
+            GeometryReader { geometry in
+                VStack {
+                    Spacer()
+                    HStack {
+                        Spacer()
+                        TextField("Domain name", text: $domain)
+                        Spacer()
+                    }
+                    Spacer()
+                        .fixedSize(horizontal: false, vertical: true)
+                    HStack {
+                        Spacer()
+                        Toggle("Exact", isOn: $exact)
+                        Spacer()
+                    }
+                    Spacer()
+                        .fixedSize(horizontal: false, vertical: true)
+                    Button(action: {
+                        addDomain()
+                    }) {
+                        Text("Add Domain")
+                    }.frame(width: geometry.size.width * 0.925, height: 50)
+                        .background(
+                            RoundedRectangle(cornerRadius: 35, style: .continuous)
+                                .fill(Color.blue)
+                        )
+                        .foregroundColor(.white)
+                        .onTapGesture {
+                            addDomain()
+                        }
+                    Spacer()
+                }
+            }
+        }
+    }
+    
+    func addDomain() {
+        let list: ListType = exact ? .whitelist : .whitelistRegex
+        self.hole!.add(domain: self.domain, to: list) { result in
+            switch result {
+            case .success(_):
+                break
+            case .failure(let error):
+                print(error)
+            }
+            
+        }
+        self.domain = ""
+        fetch()
+        showAddDomain = false
     }
     
     func fetch() {
+        self.whitelist = [ListItem]()
         self.hole = SwiftHole.init(host: ip, apiToken: scannedKey)
         self.hole!.fetchList(ListType.whitelist) { result in
             switch result {

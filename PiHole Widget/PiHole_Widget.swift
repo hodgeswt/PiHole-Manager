@@ -115,7 +115,7 @@ struct Provider: IntentTimelineProvider {
             switch result {
             case .success(let blocked):
                 entry = PiHole_WidgetEntry(date: currentDate, text: text, data: blocked, color: color)
-                refreshDate = Calendar.current.date(byAdding: .minute, value: 5, to: currentDate)!
+                refreshDate = Calendar.current.date(byAdding: .minute, value: 3, to: currentDate)!
             case .failure(_):
                 entry = PiHole_WidgetEntry(date: currentDate, text: text, data: "0", color: color)
                 refreshDate = Calendar.current.date(byAdding: .minute, value: 1, to: currentDate)!

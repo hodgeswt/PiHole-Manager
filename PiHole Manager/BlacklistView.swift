@@ -94,7 +94,7 @@ struct BlacklistView: View {
         }
         .alert("Invalid API Key or PiHole IP", isPresented: $showAlert) {
             Button("OK", role: .cancel) {
-                self.showAlert = true
+                self.logOut = true
             }
         }
         .onAppear(perform: fetch)
@@ -123,7 +123,7 @@ struct BlacklistView: View {
             case .success(_):
                 break
             case .failure(_):
-                self.showAlert = true
+                break
             }
             
         }
@@ -136,6 +136,17 @@ struct BlacklistView: View {
         self.blacklist = [ListItem:ListType]()
         self.blacklistDomains = [ListItem]()
         self.hole = SwiftHole.init(host: ip, apiToken: scannedKey)
+        
+        self.hole!.fetchSummary { result in
+                    switch result {
+                    case .failure(_):
+                        self.showAlert = true
+                    default:
+                        break
+                    }
+                }
+        
+        
         self.hole!.fetchList(ListType.blacklist) { result in
             switch result {
             case .success(let data):
@@ -144,7 +155,7 @@ struct BlacklistView: View {
                 }
                 self.blacklistDomains.append(contentsOf: data)
             case .failure(_):
-                self.showAlert = true
+                break
             }
         }
         
@@ -156,7 +167,7 @@ struct BlacklistView: View {
                 }
                 self.blacklistDomains.append(contentsOf: data)
             case .failure(_):
-                self.showAlert = true
+                break
             }
         }
     }

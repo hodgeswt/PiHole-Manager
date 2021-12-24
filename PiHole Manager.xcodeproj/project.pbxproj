@@ -76,6 +76,7 @@
 		BECB54BF27759D8C00BFBB71 /* BlockedAdsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BlockedAdsExtension.entitlements; sourceTree = "<group>"; };
 		BECB54C02775A12800BFBB71 /* BlockedAdsExtensionRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BlockedAdsExtensionRelease.entitlements; sourceTree = "<group>"; };
 		BECB54C12775A13700BFBB71 /* PiHole ManagerRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "PiHole ManagerRelease.entitlements"; sourceTree = "<group>"; };
+		BECB54E02775B21D00BFBB71 /* PiHole-Manager-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "PiHole-Manager-Info.plist"; sourceTree = SOURCE_ROOT; };
 		BED0BB912775246C0082BBF2 /* OverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewView.swift; sourceTree = "<group>"; };
 		BEE85A76277520B400BC1823 /* PiHole Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PiHole Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEE85A79277520B400BC1823 /* PiHole_ManagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiHole_ManagerApp.swift; sourceTree = "<group>"; };
@@ -153,6 +154,7 @@
 		BEE85A78277520B400BC1823 /* PiHole Manager */ = {
 			isa = PBXGroup;
 			children = (
+				BECB54E02775B21D00BFBB71 /* PiHole-Manager-Info.plist */,
 				BECB54C12775A13700BFBB71 /* PiHole ManagerRelease.entitlements */,
 				BECB54BE27759CE200BFBB71 /* PiHole Manager.entitlements */,
 				BE9DC1D62775455300479101 /* DisableButton.swift */,
@@ -514,6 +516,7 @@
 				DEVELOPMENT_TEAM = 7M53NGQ966;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "PiHole-Manager-Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Camera is needed to scan API key QR code";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -546,6 +549,7 @@
 				DEVELOPMENT_TEAM = 7M53NGQ966;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "PiHole-Manager-Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Camera is needed to scan API key QR code";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

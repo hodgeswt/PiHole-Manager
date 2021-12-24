@@ -24,8 +24,7 @@ struct ContentView: View {
     @State var showHelp = false
     
     @State var buttonText = "Scan API Key"
-    @State var instructionsText = ""
-
+    
     var body: some View {
         TabView {
             if (!loggedIn) {
@@ -108,6 +107,7 @@ struct ContentView: View {
                         Spacer().fixedSize(horizontal: false, vertical: true)
                         Button("Save IP") {
                             self.defaults.set(self.ip, forKey: "ip")
+                            enterIp = false
                             loggedIn = true
                         }
                         .frame(height: 50)
@@ -128,17 +128,17 @@ struct ContentView: View {
                     Text("Scan")
                 }
             } else {
-                OverviewView(scannedKey: scannedKey!, ip: ip)
+                OverviewView(scannedKey: scannedKey!, ip: ip, logOut: $logOut)
                     .tabItem {
                         Image(systemName: "house.fill")
                         Text("Overview")
                     }
-                BlacklistView(scannedKey: scannedKey!, ip: ip)
+                BlacklistView(scannedKey: scannedKey!, ip: ip, logOut: $logOut)
                     .tabItem {
                         Image(systemName: "exclamationmark.octagon")
                         Text("Blacklist")
                     }
-                WhitelistView(scannedKey: scannedKey!, ip: ip)
+                WhitelistView(scannedKey: scannedKey!, ip: ip, logOut: $logOut)
                     .tabItem {
                         Image(systemName: "checkmark.circle")
                         Text("Whitelist")
@@ -154,6 +154,18 @@ struct ContentView: View {
             self.defaults.set("", forKey: "apiKey")
             self.defaults.set("", forKey: "ip")
             self.ip = ""
+            
+            self.scan = false
+            self.scannedKey = nil
+            
+            self.showEnterIp = false
+            self.enterIp = false
+            self.ip = ""
+            
+            self.showHelp = false
+            
+            self.buttonText = "Scan API Key"
+            
             self.loggedIn = false
         }
         .onAppear(perform: fetch)

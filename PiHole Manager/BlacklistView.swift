@@ -22,6 +22,10 @@ struct BlacklistView: View {
     @State var domain = ""
     @State var exact = true
     
+    @State var showAlert = false
+    
+    @Binding var logOut: Bool
+    
     var body: some View {
         GeometryReader { geometry in
             VStack {
@@ -88,6 +92,11 @@ struct BlacklistView: View {
                 }
             }
         }
+        .alert("Invalid API Key or PiHole IP", isPresented: $showAlert) {
+            Button("OK", role: .cancel) {
+                self.showAlert = true
+            }
+        }
         .onAppear(perform: fetch)
     }
     
@@ -113,8 +122,8 @@ struct BlacklistView: View {
             switch result {
             case .success(_):
                 break
-            case .failure(let error):
-                print(error)
+            case .failure(_):
+                self.showAlert = true
             }
             
         }
@@ -134,8 +143,8 @@ struct BlacklistView: View {
                     self.blacklist[item] = ListType.blacklist
                 }
                 self.blacklistDomains.append(contentsOf: data)
-            case .failure(let error):
-                print(error)
+            case .failure(_):
+                self.showAlert = true
             }
         }
         
@@ -146,16 +155,9 @@ struct BlacklistView: View {
                     self.blacklist[item] = ListType.blacklistRegex
                 }
                 self.blacklistDomains.append(contentsOf: data)
-            case .failure(let error):
-                print(error)
+            case .failure(_):
+                self.showAlert = true
             }
         }
     }
 }
-
-struct BlacklistView_Previews: PreviewProvider {
-    static var previews: some View {
-        BlacklistView(scannedKey: "asdf", ip: "asdfasdf")
-    }
-}
-

@@ -28,6 +28,10 @@ struct OverviewView: View {
     
     @State var summary: Summary?
     
+    @State var showAlert = false
+    
+    @Binding var logOut: Bool
+    
     var body: some View {
         GeometryReader { geometry in
             VStack {
@@ -68,6 +72,11 @@ struct OverviewView: View {
                 Spacer()
             }
         }.onAppear(perform: fetch)
+            .alert("Invalid API Key or PiHole IP", isPresented: $showAlert) {
+                Button("OK", role: .cancel) {
+                    self.logOut.toggle()
+                }
+            }
     }
     
     func fetch() {
@@ -76,15 +85,9 @@ struct OverviewView: View {
                     switch result {
                     case .success(let summary):
                         self.summary = summary
-                    case .failure(let error):
-                        print(error)
+                    case .failure(_):
+                        self.showAlert = true
                     }
                 }
-    }
-}
-
-struct OverviewView_Previews: PreviewProvider {
-    static var previews: some View {
-        OverviewView(scannedKey: "testing", ip: "0.0.0.0")
     }
 }

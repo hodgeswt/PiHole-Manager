@@ -29,10 +29,3 @@ struct TitleView: View {
         .foregroundColor(.white)
     }
 }
-
-struct TitleView_Previews: PreviewProvider {
-    static var previews: some View {
-        TitleView(text: "Test", color: SwiftUI.Color.red, width: .infinity, height: 150)
-    }
-}
-

@@ -32,14 +32,14 @@ struct OverviewView: View {
         GeometryReader { geometry in
             VStack {
                 Spacer()
-                TitleView(text: "Today's Data", color: SwiftUI.Color.purple, width: geometry.size.width * 0.9375, height: 50)
+                TitleView(text: "Today's Data", color: Color.purple, width: geometry.size.width * 0.9375, height: 50)
                     if let summary = summary {
                         let side = geometry.size.width / 3.2
                         HStack {
                             Spacer()
-                            DataView(label: "Queries", data: String(summary.dnsQueriesToday), color: SwiftUI.Color.green, width: side, height: side)
-                            DataView(label: "Blocked", data: String(summary.adsBlockedToday), color: SwiftUI.Color.blue, width: side, height: side)
-                            DataView(label: "Percentage Blocked", data: String(round(summary.adsPercentageToday, toNearest: 0.1).truncate(places: 2)) + "%", color: SwiftUI.Color.orange, width: side, height: side)
+                            DataView(label: "Queries", data: String(summary.dnsQueriesToday), color: Color.green, width: side, height: side)
+                            DataView(label: "Blocked", data: String(summary.adsBlockedToday), color: Color.blue, width: side, height: side)
+                            DataView(label: "Percentage Blocked", data: String(round(summary.adsPercentageToday, toNearest: 0.1).truncate(places: 2)) + "%", color: Color.orange, width: side, height: side)
                             Spacer()
                         }
                         HStack {
@@ -50,6 +50,21 @@ struct OverviewView: View {
                             Spacer()
                         }
                     }
+                Button(action: {
+                    fetch()
+                }) {
+                    VStack {
+                        Text("Refresh")
+                            .font(.title)
+                    }
+                    .multilineTextAlignment(.center)
+                    .frame(width: geometry.size.width * 0.9375, height: 50)
+                    .background(
+                        RoundedRectangle(cornerRadius: 35, style: .continuous)
+                            .fill(.mint)
+                    )
+                    .foregroundColor(.white)
+                }
                 Spacer()
             }
         }.onAppear(perform: fetch)

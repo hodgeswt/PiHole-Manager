@@ -14,7 +14,6 @@ struct ControlView: View {
     var ip: String
     
     @Binding var logOut: Bool
-    @State var childLogOut = false
     
     @State var hole: SwiftHole?
     

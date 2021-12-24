@@ -11,6 +11,8 @@
 		BE9DC1D12775392500479101 /* DataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DC1D02775392500479101 /* DataView.swift */; };
 		BE9DC1D32775420C00479101 /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DC1D22775420C00479101 /* ControlView.swift */; };
 		BE9DC1D5277542AE00479101 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DC1D4277542AE00479101 /* TitleView.swift */; };
+		BE9DC1D72775455300479101 /* DisableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DC1D62775455300479101 /* DisableButton.swift */; };
+		BE9DC1DB2775498400479101 /* LogOutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DC1DA2775498400479101 /* LogOutButton.swift */; };
 		BED0BB922775246C0082BBF2 /* OverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED0BB912775246C0082BBF2 /* OverviewView.swift */; };
 		BED0BB95277525B50082BBF2 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = BED0BB94277525B50082BBF2 /* CodeScanner */; };
 		BEE85A7A277520B400BC1823 /* PiHole_ManagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE85A79277520B400BC1823 /* PiHole_ManagerApp.swift */; };
@@ -25,6 +27,8 @@
 		BE9DC1D02775392500479101 /* DataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataView.swift; sourceTree = "<group>"; };
 		BE9DC1D22775420C00479101 /* ControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlView.swift; sourceTree = "<group>"; };
 		BE9DC1D4277542AE00479101 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		BE9DC1D62775455300479101 /* DisableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisableButton.swift; sourceTree = "<group>"; };
+		BE9DC1DA2775498400479101 /* LogOutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutButton.swift; sourceTree = "<group>"; };
 		BED0BB912775246C0082BBF2 /* OverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewView.swift; sourceTree = "<group>"; };
 		BEE85A76277520B400BC1823 /* PiHole Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PiHole Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEE85A79277520B400BC1823 /* PiHole_ManagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiHole_ManagerApp.swift; sourceTree = "<group>"; };
@@ -51,8 +55,6 @@
 		BEE85A6D277520B400BC1823 = {
 			isa = PBXGroup;
 			children = (
-				BE9DC1D4277542AE00479101 /* TitleView.swift */,
-				BE9DC1D22775420C00479101 /* ControlView.swift */,
 				BEE85A78277520B400BC1823 /* PiHole Manager */,
 				BEE85A77277520B400BC1823 /* Products */,
 			);
@@ -69,6 +71,10 @@
 		BEE85A78277520B400BC1823 /* PiHole Manager */ = {
 			isa = PBXGroup;
 			children = (
+				BE9DC1D62775455300479101 /* DisableButton.swift */,
+				BE9DC1D4277542AE00479101 /* TitleView.swift */,
+				BE9DC1D22775420C00479101 /* ControlView.swift */,
+				BE9DC1DA2775498400479101 /* LogOutButton.swift */,
 				BEE85A79277520B400BC1823 /* PiHole_ManagerApp.swift */,
 				BEE85A7B277520B400BC1823 /* ContentView.swift */,
 				BED0BB912775246C0082BBF2 /* OverviewView.swift */,
@@ -170,7 +176,9 @@
 				BE9DC1D12775392500479101 /* DataView.swift in Sources */,
 				BEE85A83277520B600BC1823 /* Persistence.swift in Sources */,
 				BED0BB922775246C0082BBF2 /* OverviewView.swift in Sources */,
+				BE9DC1D72775455300479101 /* DisableButton.swift in Sources */,
 				BEE85A7C277520B400BC1823 /* ContentView.swift in Sources */,
+				BE9DC1DB2775498400479101 /* LogOutButton.swift in Sources */,
 				BEE85A86277520B600BC1823 /* PiHole_Manager.xcdatamodeld in Sources */,
 				BE9DC1D32775420C00479101 /* ControlView.swift in Sources */,
 				BEE85A7A277520B400BC1823 /* PiHole_ManagerApp.swift in Sources */,

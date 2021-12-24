@@ -12,6 +12,7 @@ struct ContentView: View {
     let defaults = UserDefaults.standard
     
     @State var loggedIn = false
+    @State var logOut = false
     
     @State var scan = false
     @State var scannedKey: String?
@@ -132,13 +133,19 @@ struct ContentView: View {
                         Image(systemName: "house.fill")
                         Text("Overview")
                     }
-                ControlView()
+                ControlView(scannedKey: scannedKey!, ip: ip, logOut: $logOut)
                     .tabItem {
                         Image(systemName: "gearshape.fill")
                         Text("Controls")
                     }
             }
-        }.onAppear(perform: fetch)
+        }
+        .onChange(of: logOut) { _ in
+            self.defaults.set("", forKey: "apiKey")
+            self.defaults.set("", forKey: "ip")
+            self.loggedIn = false
+        }
+        .onAppear(perform: fetch)
     }
     
     func fetch() {

@@ -133,6 +133,16 @@ struct ContentView: View {
                         Image(systemName: "house.fill")
                         Text("Overview")
                     }
+                BlacklistView(scannedKey: scannedKey!, ip: ip)
+                    .tabItem {
+                        Image(systemName: "exclamationmark.octagon")
+                        Text("Blacklist")
+                    }
+                WhitelistView(scannedKey: scannedKey!, ip: ip)
+                    .tabItem {
+                        Image(systemName: "checkmark.circle")
+                        Text("Whitelist")
+                    }
                 ControlView(scannedKey: scannedKey!, ip: ip, logOut: $logOut)
                     .tabItem {
                         Image(systemName: "gearshape.fill")

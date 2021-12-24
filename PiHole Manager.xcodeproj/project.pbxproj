@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BE9DC1CF277529D000479101 /* SwiftHole in Frameworks */ = {isa = PBXBuildFile; productRef = BE9DC1CE277529D000479101 /* SwiftHole */; };
 		BE9DC1D12775392500479101 /* DataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DC1D02775392500479101 /* DataView.swift */; };
 		BE9DC1D32775420C00479101 /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DC1D22775420C00479101 /* ControlView.swift */; };
 		BE9DC1D5277542AE00479101 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DC1D4277542AE00479101 /* TitleView.swift */; };
 		BE9DC1D72775455300479101 /* DisableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DC1D62775455300479101 /* DisableButton.swift */; };
 		BE9DC1DB2775498400479101 /* LogOutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DC1DA2775498400479101 /* LogOutButton.swift */; };
+		BE9DC1DD2775726A00479101 /* BlacklistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DC1DC2775726A00479101 /* BlacklistView.swift */; };
+		BE9DC1DF2775734700479101 /* WhitelistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DC1DE2775734700479101 /* WhitelistView.swift */; };
+		BECB54A127757EFB00BFBB71 /* SwiftHole in Frameworks */ = {isa = PBXBuildFile; productRef = BECB54A027757EFB00BFBB71 /* SwiftHole */; };
 		BED0BB922775246C0082BBF2 /* OverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED0BB912775246C0082BBF2 /* OverviewView.swift */; };
 		BED0BB95277525B50082BBF2 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = BED0BB94277525B50082BBF2 /* CodeScanner */; };
 		BEE85A7A277520B400BC1823 /* PiHole_ManagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE85A79277520B400BC1823 /* PiHole_ManagerApp.swift */; };
@@ -29,6 +31,8 @@
 		BE9DC1D4277542AE00479101 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		BE9DC1D62775455300479101 /* DisableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisableButton.swift; sourceTree = "<group>"; };
 		BE9DC1DA2775498400479101 /* LogOutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutButton.swift; sourceTree = "<group>"; };
+		BE9DC1DC2775726A00479101 /* BlacklistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlacklistView.swift; sourceTree = "<group>"; };
+		BE9DC1DE2775734700479101 /* WhitelistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhitelistView.swift; sourceTree = "<group>"; };
 		BED0BB912775246C0082BBF2 /* OverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewView.swift; sourceTree = "<group>"; };
 		BEE85A76277520B400BC1823 /* PiHole Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PiHole Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEE85A79277520B400BC1823 /* PiHole_ManagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiHole_ManagerApp.swift; sourceTree = "<group>"; };
@@ -44,7 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE9DC1CF277529D000479101 /* SwiftHole in Frameworks */,
+				BECB54A127757EFB00BFBB71 /* SwiftHole in Frameworks */,
 				BED0BB95277525B50082BBF2 /* CodeScanner in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -77,6 +81,8 @@
 				BE9DC1DA2775498400479101 /* LogOutButton.swift */,
 				BEE85A79277520B400BC1823 /* PiHole_ManagerApp.swift */,
 				BEE85A7B277520B400BC1823 /* ContentView.swift */,
+				BE9DC1DC2775726A00479101 /* BlacklistView.swift */,
+				BE9DC1DE2775734700479101 /* WhitelistView.swift */,
 				BED0BB912775246C0082BBF2 /* OverviewView.swift */,
 				BE9DC1D02775392500479101 /* DataView.swift */,
 				BEE85A7D277520B600BC1823 /* Assets.xcassets */,
@@ -113,7 +119,7 @@
 			name = "PiHole Manager";
 			packageProductDependencies = (
 				BED0BB94277525B50082BBF2 /* CodeScanner */,
-				BE9DC1CE277529D000479101 /* SwiftHole */,
+				BECB54A027757EFB00BFBB71 /* SwiftHole */,
 			);
 			productName = "PiHole Manager";
 			productReference = BEE85A76277520B400BC1823 /* PiHole Manager.app */;
@@ -145,7 +151,7 @@
 			mainGroup = BEE85A6D277520B400BC1823;
 			packageReferences = (
 				BED0BB93277525B50082BBF2 /* XCRemoteSwiftPackageReference "CodeScanner" */,
-				BE9DC1CD277529D000479101 /* XCRemoteSwiftPackageReference "SwiftHole" */,
+				BECB549F27757EFB00BFBB71 /* XCRemoteSwiftPackageReference "SwiftHole" */,
 			);
 			productRefGroup = BEE85A77277520B400BC1823 /* Products */;
 			projectDirPath = "";
@@ -175,6 +181,7 @@
 			files = (
 				BE9DC1D12775392500479101 /* DataView.swift in Sources */,
 				BEE85A83277520B600BC1823 /* Persistence.swift in Sources */,
+				BE9DC1DF2775734700479101 /* WhitelistView.swift in Sources */,
 				BED0BB922775246C0082BBF2 /* OverviewView.swift in Sources */,
 				BE9DC1D72775455300479101 /* DisableButton.swift in Sources */,
 				BEE85A7C277520B400BC1823 /* ContentView.swift in Sources */,
@@ -182,6 +189,7 @@
 				BEE85A86277520B600BC1823 /* PiHole_Manager.xcdatamodeld in Sources */,
 				BE9DC1D32775420C00479101 /* ControlView.swift in Sources */,
 				BEE85A7A277520B400BC1823 /* PiHole_ManagerApp.swift in Sources */,
+				BE9DC1DD2775726A00479101 /* BlacklistView.swift in Sources */,
 				BE9DC1D5277542AE00479101 /* TitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,12 +397,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		BE9DC1CD277529D000479101 /* XCRemoteSwiftPackageReference "SwiftHole" */ = {
+		BECB549F27757EFB00BFBB71 /* XCRemoteSwiftPackageReference "SwiftHole" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Bunn/SwiftHole";
+			repositoryURL = "https://github.com/hodgeswt/SwiftHole";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				branch = master;
+				kind = branch;
 			};
 		};
 		BED0BB93277525B50082BBF2 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
@@ -408,9 +416,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		BE9DC1CE277529D000479101 /* SwiftHole */ = {
+		BECB54A027757EFB00BFBB71 /* SwiftHole */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = BE9DC1CD277529D000479101 /* XCRemoteSwiftPackageReference "SwiftHole" */;
+			package = BECB549F27757EFB00BFBB71 /* XCRemoteSwiftPackageReference "SwiftHole" */;
 			productName = SwiftHole;
 		};
 		BED0BB94277525B50082BBF2 /* CodeScanner */ = {

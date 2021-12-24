@@ -15,7 +15,8 @@ struct BlacklistView: View {
     
     @State var hole: SwiftHole?
     
-    @State var blacklist = [ListItem]()
+    @State var blacklist = [ListItem:ListType]()
+    @State var blacklistDomains = [ListItem]()
     
     @State var showAddDomain = false
     @State var domain = ""
@@ -41,8 +42,11 @@ struct BlacklistView: View {
                     showAddDomain = true
                 }
                 .foregroundColor(.white)
-                List(blacklist, id: \.self) { item in
-                    Text(item.domain)
+                List {
+                    ForEach(blacklistDomains, id: \.self) { item in
+                        Text(item.domain)
+                    }
+                    .onDelete(perform: deleteItem)
                 }
                 .refreshable {
                     fetch()
@@ -87,6 +91,22 @@ struct BlacklistView: View {
         .onAppear(perform: fetch)
     }
     
+    func deleteItem(at offsets: IndexSet) {
+        let index = offsets.first!
+        let item: ListItem = blacklistDomains[index]
+        let list = blacklist[item]
+        
+        self.hole!.remove(domain: item.domain, from: list!) { result in
+            switch result {
+            case .success(_):
+                blacklistDomains.remove(at: index)
+                blacklist.removeValue(forKey: item)
+            case .failure(_):
+                break
+            }
+        }
+    }
+    
     func addDomain() {
         let list: ListType = exact ? .blacklist : .blacklistRegex
         self.hole!.add(domain: self.domain, to: list) { result in
@@ -104,12 +124,16 @@ struct BlacklistView: View {
     }
     
     func fetch() {
-        self.blacklist = [ListItem]()
+        self.blacklist = [ListItem:ListType]()
+        self.blacklistDomains = [ListItem]()
         self.hole = SwiftHole.init(host: ip, apiToken: scannedKey)
         self.hole!.fetchList(ListType.blacklist) { result in
             switch result {
             case .success(let data):
-                self.blacklist.append(contentsOf: data)
+                for item in data {
+                    self.blacklist[item] = ListType.blacklist
+                }
+                self.blacklistDomains.append(contentsOf: data)
             case .failure(let error):
                 print(error)
             }
@@ -118,7 +142,10 @@ struct BlacklistView: View {
         self.hole!.fetchList(ListType.blacklistRegex) { result in
             switch result {
             case .success(let data):
-                self.blacklist.append(contentsOf: data)
+                for item in data {
+                    self.blacklist[item] = ListType.blacklistRegex
+                }
+                self.blacklistDomains.append(contentsOf: data)
             case .failure(let error):
                 print(error)
             }

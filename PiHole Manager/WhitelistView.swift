@@ -15,7 +15,8 @@ struct WhitelistView: View {
     
     @State var hole: SwiftHole?
     
-    @State var whitelist = [ListItem]()
+    @State var whitelist = [ListItem:ListType]()
+    @State var whitelistDomains = [ListItem]()
     
     @State var showAddDomain = false
     @State var domain = ""
@@ -41,8 +42,11 @@ struct WhitelistView: View {
                 .onTapGesture {
                     showAddDomain = true
                 }
-                List(whitelist, id: \.self) { item in
-                    Text(item.domain)
+                List {
+                    ForEach(whitelistDomains, id: \.self) { item in
+                        Text(item.domain)
+                    }
+                    .onDelete(perform: deleteItem)
                 }
                 .refreshable {
                     fetch()
@@ -87,6 +91,22 @@ struct WhitelistView: View {
         }
     }
     
+    func deleteItem(at offsets: IndexSet) {
+        let index = offsets.first!
+        let item: ListItem = whitelistDomains[index]
+        let list = whitelist[item]
+        
+        self.hole!.remove(domain: item.domain, from: list!) { result in
+            switch result {
+            case .success(_):
+                whitelistDomains.remove(at: index)
+                whitelist.removeValue(forKey: item)
+            case .failure(_):
+                break
+            }
+        }
+    }
+    
     func addDomain() {
         let list: ListType = exact ? .whitelist : .whitelistRegex
         self.hole!.add(domain: self.domain, to: list) { result in
@@ -104,12 +124,16 @@ struct WhitelistView: View {
     }
     
     func fetch() {
-        self.whitelist = [ListItem]()
+        self.whitelist = [ListItem:ListType]()
+        self.whitelistDomains = [ListItem]()
         self.hole = SwiftHole.init(host: ip, apiToken: scannedKey)
         self.hole!.fetchList(ListType.whitelist) { result in
             switch result {
             case .success(let data):
-                self.whitelist.append(contentsOf: data)
+                for item in data {
+                    self.whitelist[item] = ListType.whitelist
+                }
+                self.whitelistDomains.append(contentsOf: data)
             case .failure(let error):
                 print(error)
             }
@@ -118,7 +142,10 @@ struct WhitelistView: View {
         self.hole!.fetchList(ListType.whitelistRegex) { result in
             switch result {
             case .success(let data):
-                self.whitelist.append(contentsOf: data)
+                for item in data {
+                    self.whitelist[item] = ListType.whitelistRegex
+                }
+                self.whitelistDomains.append(contentsOf: data)
             case .failure(let error):
                 print(error)
             }

@@ -29,7 +29,7 @@ struct ControlView: View {
                 Spacer()
                 HStack {
                     Spacer()
-                    TitleView(text: "Control Panel", color: Color.purple, width: geometry.size.width * 0.9375, height: 50)
+                    TitleView(text: "Control Panel", color: Color.purple, width: geometry.size.width * 0.625, height: 50)
                     Spacer()
                 }
                 HStack {

@@ -9,7 +9,7 @@ import SwiftUI
 import CodeScanner
 
 struct ContentView: View {
-    let defaults = UserDefaults.standard
+    let defaults = UserDefaults(suiteName: "group.com.will-hodges.Pi-Hole-Manager")!
     
     @State var loggedIn = false
     @State var logOut = false
@@ -153,6 +153,7 @@ struct ContentView: View {
         .onChange(of: logOut) { _ in
             self.defaults.set("", forKey: "apiKey")
             self.defaults.set("", forKey: "ip")
+            self.ip = ""
             self.loggedIn = false
         }
         .onAppear(perform: fetch)

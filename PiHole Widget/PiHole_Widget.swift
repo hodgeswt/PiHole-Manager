@@ -1,6 +1,6 @@
 //
-//  BlockedAds.swift
-//  BlockedAds
+//  PiHole_Widget.swift
+//  PiHole_Widget
 //
 //  Created by Will Hodges on 12/24/21.
 //
@@ -68,12 +68,12 @@ struct DataRetriever {
 
 struct Provider: IntentTimelineProvider {
     
-    func placeholder(in context: Context) -> BlockedAdsEntry {
-        BlockedAdsEntry(date: Date(), text: "Ads Blocked", data: "100", color: .blue)
+    func placeholder(in context: Context) -> PiHole_WidgetEntry {
+        PiHole_WidgetEntry(date: Date(), text: "Ads Blocked", data: "100", color: .blue)
     }
 
-    func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (BlockedAdsEntry) -> ()) {
-        let entry = BlockedAdsEntry(date: Date(), text: "Ads Blocked", data: "100", color: .blue)
+    func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (PiHole_WidgetEntry) -> ()) {
+        let entry = PiHole_WidgetEntry(date: Date(), text: "Ads Blocked", data: "100", color: .blue)
         completion(entry)
     }
 
@@ -82,8 +82,8 @@ struct Provider: IntentTimelineProvider {
             let currentDate = Date()
             let refreshDate: Date
             
-            var entry: BlockedAdsEntry
-            var entries: [BlockedAdsEntry] = [BlockedAdsEntry]()
+            var entry: PiHole_WidgetEntry
+            var entries: [PiHole_WidgetEntry] = [PiHole_WidgetEntry]()
             
             var text: String
             var color: SwiftUI.Color
@@ -114,10 +114,10 @@ struct Provider: IntentTimelineProvider {
             
             switch result {
             case .success(let blocked):
-                entry = BlockedAdsEntry(date: currentDate, text: text, data: blocked, color: color)
+                entry = PiHole_WidgetEntry(date: currentDate, text: text, data: blocked, color: color)
                 refreshDate = Calendar.current.date(byAdding: .minute, value: 5, to: currentDate)!
             case .failure(_):
-                entry = BlockedAdsEntry(date: currentDate, text: text, data: "0", color: color)
+                entry = PiHole_WidgetEntry(date: currentDate, text: text, data: "0", color: color)
                 refreshDate = Calendar.current.date(byAdding: .minute, value: 1, to: currentDate)!
             }
             entries.append(entry)
@@ -128,14 +128,14 @@ struct Provider: IntentTimelineProvider {
     }
 }
 
-struct BlockedAdsEntry: TimelineEntry {
+struct PiHole_WidgetEntry: TimelineEntry {
     let date: Date
     let text: String
     let data: String
     let color: SwiftUI.Color
 }
 
-struct BlockedAdsEntryView : View {
+struct PiHole_WidgetEntryView : View {
     
     var entry: Provider.Entry
 
@@ -155,13 +155,13 @@ struct BlockedAdsEntryView : View {
 }
 
 @main
-struct BlockedAds: Widget {
+struct PiHole_Widget: Widget {
     
-    let kind: String = "BlockedAds"
+    let kind: String = "PiHole_Widget"
 
     var body: some WidgetConfiguration {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
-            BlockedAdsEntryView(entry: entry)
+            PiHole_WidgetEntryView(entry: entry)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(entry.color)
         }

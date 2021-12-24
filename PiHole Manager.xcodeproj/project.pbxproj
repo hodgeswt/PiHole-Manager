@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE1FFB792775BD9F00173287 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECB54A827758E4900BFBB71 /* WidgetKit.framework */; };
+		BE1FFB7A2775BD9F00173287 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECB54AA27758E4900BFBB71 /* SwiftUI.framework */; };
+		BE1FFB7D2775BD9F00173287 /* PiHole_Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1FFB7C2775BD9F00173287 /* PiHole_Widget.swift */; };
+		BE1FFB802775BDA000173287 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE1FFB7F2775BDA000173287 /* Assets.xcassets */; };
+		BE1FFB822775BDA000173287 /* PiHole_Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = BE1FFB7E2775BD9F00173287 /* PiHole_Widget.intentdefinition */; };
+		BE1FFB832775BDA000173287 /* PiHole_Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = BE1FFB7E2775BD9F00173287 /* PiHole_Widget.intentdefinition */; };
+		BE1FFB862775BDA000173287 /* PiHole WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BE1FFB782775BD9F00173287 /* PiHole WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		BE1FFB8B2775BDAC00173287 /* SwiftHole in Frameworks */ = {isa = PBXBuildFile; productRef = BE1FFB8A2775BDAC00173287 /* SwiftHole */; };
 		BE9DC1D12775392500479101 /* DataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DC1D02775392500479101 /* DataView.swift */; };
 		BE9DC1D32775420C00479101 /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DC1D22775420C00479101 /* ControlView.swift */; };
 		BE9DC1D5277542AE00479101 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DC1D4277542AE00479101 /* TitleView.swift */; };
@@ -15,14 +23,6 @@
 		BE9DC1DD2775726A00479101 /* BlacklistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DC1DC2775726A00479101 /* BlacklistView.swift */; };
 		BE9DC1DF2775734700479101 /* WhitelistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DC1DE2775734700479101 /* WhitelistView.swift */; };
 		BECB54A127757EFB00BFBB71 /* SwiftHole in Frameworks */ = {isa = PBXBuildFile; productRef = BECB54A027757EFB00BFBB71 /* SwiftHole */; };
-		BECB54A927758E4900BFBB71 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECB54A827758E4900BFBB71 /* WidgetKit.framework */; };
-		BECB54AB27758E4900BFBB71 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECB54AA27758E4900BFBB71 /* SwiftUI.framework */; };
-		BECB54AE27758E4900BFBB71 /* BlockedAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECB54AD27758E4900BFBB71 /* BlockedAds.swift */; };
-		BECB54B127758E4B00BFBB71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BECB54B027758E4B00BFBB71 /* Assets.xcassets */; };
-		BECB54B327758E4B00BFBB71 /* BlockedAds.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = BECB54AF27758E4900BFBB71 /* BlockedAds.intentdefinition */; };
-		BECB54B427758E4B00BFBB71 /* BlockedAds.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = BECB54AF27758E4900BFBB71 /* BlockedAds.intentdefinition */; };
-		BECB54B727758E4B00BFBB71 /* BlockedAdsExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BECB54A627758E4900BFBB71 /* BlockedAdsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		BECB54BD277592E000BFBB71 /* SwiftHole in Frameworks */ = {isa = PBXBuildFile; productRef = BECB54BC277592E000BFBB71 /* SwiftHole */; };
 		BED0BB922775246C0082BBF2 /* OverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED0BB912775246C0082BBF2 /* OverviewView.swift */; };
 		BED0BB95277525B50082BBF2 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = BED0BB94277525B50082BBF2 /* CodeScanner */; };
 		BEE85A7A277520B400BC1823 /* PiHole_ManagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE85A79277520B400BC1823 /* PiHole_ManagerApp.swift */; };
@@ -34,12 +34,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BECB54B527758E4B00BFBB71 /* PBXContainerItemProxy */ = {
+		BE1FFB842775BDA000173287 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BEE85A6E277520B400BC1823 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = BECB54A527758E4900BFBB71;
-			remoteInfo = BlockedAdsExtension;
+			remoteGlobalIDString = BE1FFB772775BD9F00173287;
+			remoteInfo = "PiHole WidgetExtension";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -50,7 +50,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				BECB54B727758E4B00BFBB71 /* BlockedAdsExtension.appex in Embed App Extensions */,
+				BE1FFB862775BDA000173287 /* PiHole WidgetExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -58,6 +58,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BE1FFB782775BD9F00173287 /* PiHole WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "PiHole WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE1FFB7C2775BD9F00173287 /* PiHole_Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiHole_Widget.swift; sourceTree = "<group>"; };
+		BE1FFB7E2775BD9F00173287 /* PiHole_Widget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = PiHole_Widget.intentdefinition; sourceTree = "<group>"; };
+		BE1FFB7F2775BDA000173287 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BE1FFB812775BDA000173287 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE1FFB8C2775BDB400173287 /* PiHole WidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "PiHole WidgetExtension.entitlements"; sourceTree = "<group>"; };
+		BE1FFB8D2775BDBF00173287 /* PiHole WidgetExtensionRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "PiHole WidgetExtensionRelease.entitlements"; sourceTree = "<group>"; };
 		BE9DC1D02775392500479101 /* DataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataView.swift; sourceTree = "<group>"; };
 		BE9DC1D22775420C00479101 /* ControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlView.swift; sourceTree = "<group>"; };
 		BE9DC1D4277542AE00479101 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
@@ -65,16 +72,9 @@
 		BE9DC1DA2775498400479101 /* LogOutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutButton.swift; sourceTree = "<group>"; };
 		BE9DC1DC2775726A00479101 /* BlacklistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlacklistView.swift; sourceTree = "<group>"; };
 		BE9DC1DE2775734700479101 /* WhitelistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhitelistView.swift; sourceTree = "<group>"; };
-		BECB54A627758E4900BFBB71 /* BlockedAdsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BlockedAdsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		BECB54A827758E4900BFBB71 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		BECB54AA27758E4900BFBB71 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		BECB54AD27758E4900BFBB71 /* BlockedAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockedAds.swift; sourceTree = "<group>"; };
-		BECB54AF27758E4900BFBB71 /* BlockedAds.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = BlockedAds.intentdefinition; sourceTree = "<group>"; };
-		BECB54B027758E4B00BFBB71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BECB54B227758E4B00BFBB71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BECB54BE27759CE200BFBB71 /* PiHole Manager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "PiHole Manager.entitlements"; sourceTree = "<group>"; };
-		BECB54BF27759D8C00BFBB71 /* BlockedAdsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BlockedAdsExtension.entitlements; sourceTree = "<group>"; };
-		BECB54C02775A12800BFBB71 /* BlockedAdsExtensionRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BlockedAdsExtensionRelease.entitlements; sourceTree = "<group>"; };
 		BECB54C12775A13700BFBB71 /* PiHole ManagerRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "PiHole ManagerRelease.entitlements"; sourceTree = "<group>"; };
 		BECB54E02775B21D00BFBB71 /* PiHole-Manager-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "PiHole-Manager-Info.plist"; sourceTree = SOURCE_ROOT; };
 		BED0BB912775246C0082BBF2 /* OverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewView.swift; sourceTree = "<group>"; };
@@ -88,13 +88,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		BECB54A327758E4900BFBB71 /* Frameworks */ = {
+		BE1FFB752775BD9F00173287 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BECB54AB27758E4900BFBB71 /* SwiftUI.framework in Frameworks */,
-				BECB54A927758E4900BFBB71 /* WidgetKit.framework in Frameworks */,
-				BECB54BD277592E000BFBB71 /* SwiftHole in Frameworks */,
+				BE1FFB7A2775BD9F00173287 /* SwiftUI.framework in Frameworks */,
+				BE1FFB792775BD9F00173287 /* WidgetKit.framework in Frameworks */,
+				BE1FFB8B2775BDAC00173287 /* SwiftHole in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +110,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE1FFB7B2775BD9F00173287 /* PiHole Widget */ = {
+			isa = PBXGroup;
+			children = (
+				BE1FFB7C2775BD9F00173287 /* PiHole_Widget.swift */,
+				BE1FFB7E2775BD9F00173287 /* PiHole_Widget.intentdefinition */,
+				BE1FFB7F2775BDA000173287 /* Assets.xcassets */,
+				BE1FFB812775BDA000173287 /* Info.plist */,
+			);
+			path = "PiHole Widget";
+			sourceTree = "<group>";
+		};
 		BECB54A727758E4900BFBB71 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,24 +130,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BECB54AC27758E4900BFBB71 /* BlockedAds */ = {
-			isa = PBXGroup;
-			children = (
-				BECB54AD27758E4900BFBB71 /* BlockedAds.swift */,
-				BECB54AF27758E4900BFBB71 /* BlockedAds.intentdefinition */,
-				BECB54B027758E4B00BFBB71 /* Assets.xcassets */,
-				BECB54B227758E4B00BFBB71 /* Info.plist */,
-			);
-			path = BlockedAds;
-			sourceTree = "<group>";
-		};
 		BEE85A6D277520B400BC1823 = {
 			isa = PBXGroup;
 			children = (
-				BECB54C02775A12800BFBB71 /* BlockedAdsExtensionRelease.entitlements */,
-				BECB54BF27759D8C00BFBB71 /* BlockedAdsExtension.entitlements */,
+				BE1FFB8D2775BDBF00173287 /* PiHole WidgetExtensionRelease.entitlements */,
+				BE1FFB8C2775BDB400173287 /* PiHole WidgetExtension.entitlements */,
 				BEE85A78277520B400BC1823 /* PiHole Manager */,
-				BECB54AC27758E4900BFBB71 /* BlockedAds */,
+				BE1FFB7B2775BD9F00173287 /* PiHole Widget */,
 				BECB54A727758E4900BFBB71 /* Frameworks */,
 				BEE85A77277520B400BC1823 /* Products */,
 			);
@@ -146,7 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				BEE85A76277520B400BC1823 /* PiHole Manager.app */,
-				BECB54A627758E4900BFBB71 /* BlockedAdsExtension.appex */,
+				BE1FFB782775BD9F00173287 /* PiHole WidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -186,24 +186,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BECB54A527758E4900BFBB71 /* BlockedAdsExtension */ = {
+		BE1FFB772775BD9F00173287 /* PiHole WidgetExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BECB54B827758E4B00BFBB71 /* Build configuration list for PBXNativeTarget "BlockedAdsExtension" */;
+			buildConfigurationList = BE1FFB872775BDA000173287 /* Build configuration list for PBXNativeTarget "PiHole WidgetExtension" */;
 			buildPhases = (
-				BECB54A227758E4900BFBB71 /* Sources */,
-				BECB54A327758E4900BFBB71 /* Frameworks */,
-				BECB54A427758E4900BFBB71 /* Resources */,
+				BE1FFB742775BD9F00173287 /* Sources */,
+				BE1FFB752775BD9F00173287 /* Frameworks */,
+				BE1FFB762775BD9F00173287 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = BlockedAdsExtension;
+			name = "PiHole WidgetExtension";
 			packageProductDependencies = (
-				BECB54BC277592E000BFBB71 /* SwiftHole */,
+				BE1FFB8A2775BDAC00173287 /* SwiftHole */,
 			);
-			productName = BlockedAdsExtension;
-			productReference = BECB54A627758E4900BFBB71 /* BlockedAdsExtension.appex */;
+			productName = "PiHole WidgetExtension";
+			productReference = BE1FFB782775BD9F00173287 /* PiHole WidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		BEE85A75277520B400BC1823 /* PiHole Manager */ = {
@@ -218,7 +218,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				BECB54B627758E4B00BFBB71 /* PBXTargetDependency */,
+				BE1FFB852775BDA000173287 /* PBXTargetDependency */,
 			);
 			name = "PiHole Manager";
 			packageProductDependencies = (
@@ -239,7 +239,7 @@
 				LastSwiftUpdateCheck = 1310;
 				LastUpgradeCheck = 1310;
 				TargetAttributes = {
-					BECB54A527758E4900BFBB71 = {
+					BE1FFB772775BD9F00173287 = {
 						CreatedOnToolsVersion = 13.1;
 					};
 					BEE85A75277520B400BC1823 = {
@@ -265,17 +265,17 @@
 			projectRoot = "";
 			targets = (
 				BEE85A75277520B400BC1823 /* PiHole Manager */,
-				BECB54A527758E4900BFBB71 /* BlockedAdsExtension */,
+				BE1FFB772775BD9F00173287 /* PiHole WidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		BECB54A427758E4900BFBB71 /* Resources */ = {
+		BE1FFB762775BD9F00173287 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BECB54B127758E4B00BFBB71 /* Assets.xcassets in Resources */,
+				BE1FFB802775BDA000173287 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,12 +291,12 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		BECB54A227758E4900BFBB71 /* Sources */ = {
+		BE1FFB742775BD9F00173287 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BECB54B327758E4B00BFBB71 /* BlockedAds.intentdefinition in Sources */,
-				BECB54AE27758E4900BFBB71 /* BlockedAds.swift in Sources */,
+				BE1FFB7D2775BD9F00173287 /* PiHole_Widget.swift in Sources */,
+				BE1FFB822775BDA000173287 /* PiHole_Widget.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,11 +305,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE9DC1D12775392500479101 /* DataView.swift in Sources */,
+				BE1FFB832775BDA000173287 /* PiHole_Widget.intentdefinition in Sources */,
 				BEE85A83277520B600BC1823 /* Persistence.swift in Sources */,
 				BE9DC1DF2775734700479101 /* WhitelistView.swift in Sources */,
 				BED0BB922775246C0082BBF2 /* OverviewView.swift in Sources */,
 				BE9DC1D72775455300479101 /* DisableButton.swift in Sources */,
-				BECB54B427758E4B00BFBB71 /* BlockedAds.intentdefinition in Sources */,
 				BEE85A7C277520B400BC1823 /* ContentView.swift in Sources */,
 				BE9DC1DB2775498400479101 /* LogOutButton.swift in Sources */,
 				BEE85A86277520B600BC1823 /* PiHole_Manager.xcdatamodeld in Sources */,
@@ -323,26 +323,26 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		BECB54B627758E4B00BFBB71 /* PBXTargetDependency */ = {
+		BE1FFB852775BDA000173287 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BECB54A527758E4900BFBB71 /* BlockedAdsExtension */;
-			targetProxy = BECB54B527758E4B00BFBB71 /* PBXContainerItemProxy */;
+			target = BE1FFB772775BD9F00173287 /* PiHole WidgetExtension */;
+			targetProxy = BE1FFB842775BDA000173287 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		BECB54B927758E4B00BFBB71 /* Debug */ = {
+		BE1FFB882775BDA000173287 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_ENTITLEMENTS = BlockedAdsExtension.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "PiHole WidgetExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7M53NGQ966;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BlockedAds/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = BlockedAds;
+				INFOPLIST_FILE = "PiHole Widget/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "PiHole Widget";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -350,7 +350,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "will-hodges.PiHole-Manager.BlockedAds";
+				PRODUCT_BUNDLE_IDENTIFIER = "will-hodges.PiHole-Manager.PiHole-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -359,18 +359,18 @@
 			};
 			name = Debug;
 		};
-		BECB54BA27758E4B00BFBB71 /* Release */ = {
+		BE1FFB892775BDA000173287 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_ENTITLEMENTS = BlockedAdsExtensionRelease.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "PiHole WidgetExtensionRelease.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7M53NGQ966;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BlockedAds/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = BlockedAds;
+				INFOPLIST_FILE = "PiHole Widget/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "PiHole Widget";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -378,7 +378,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "will-hodges.PiHole-Manager.BlockedAds";
+				PRODUCT_BUNDLE_IDENTIFIER = "will-hodges.PiHole-Manager.PiHole-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -572,11 +572,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BECB54B827758E4B00BFBB71 /* Build configuration list for PBXNativeTarget "BlockedAdsExtension" */ = {
+		BE1FFB872775BDA000173287 /* Build configuration list for PBXNativeTarget "PiHole WidgetExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BECB54B927758E4B00BFBB71 /* Debug */,
-				BECB54BA27758E4B00BFBB71 /* Release */,
+				BE1FFB882775BDA000173287 /* Debug */,
+				BE1FFB892775BDA000173287 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -621,12 +621,12 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		BECB54A027757EFB00BFBB71 /* SwiftHole */ = {
+		BE1FFB8A2775BDAC00173287 /* SwiftHole */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BECB549F27757EFB00BFBB71 /* XCRemoteSwiftPackageReference "SwiftHole" */;
 			productName = SwiftHole;
 		};
-		BECB54BC277592E000BFBB71 /* SwiftHole */ = {
+		BECB54A027757EFB00BFBB71 /* SwiftHole */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BECB549F27757EFB00BFBB71 /* XCRemoteSwiftPackageReference "SwiftHole" */;
 			productName = SwiftHole;

@@ -7,8 +7,12 @@
 
 import SwiftUI
 import CodeScanner
+import WatchConnectivity
 
 struct ContentView: View {
+    
+    var model = PhoneConnectivityProvider()
+    
     let defaults = UserDefaults(suiteName: "group.com.will-hodges.Pi-Hole-Manager")!
     
     @State var loggedIn = false
@@ -107,6 +111,7 @@ struct ContentView: View {
                         Spacer().fixedSize(horizontal: false, vertical: true)
                         Button("Save IP") {
                             self.defaults.set(self.ip, forKey: "ip")
+                            self.model.send(message: [self.ip:self.scannedKey!])
                             enterIp = false
                             loggedIn = true
                         }
@@ -119,6 +124,7 @@ struct ContentView: View {
                         .foregroundColor(.white)
                         .onTapGesture {
                             self.defaults.set(self.ip, forKey: "ip")
+                            self.model.send(message: [self.ip:self.scannedKey!])
                             loggedIn = true
                         }
                     }
@@ -166,6 +172,8 @@ struct ContentView: View {
             
             self.buttonText = "Scan API Key"
             
+            self.model.send(message: ["":""])
+            
             self.loggedIn = false
         }
         .onAppear(perform: fetch)
@@ -177,6 +185,7 @@ struct ContentView: View {
                 if savedIp != "" && savedKey != "" {
                     self.ip = savedIp
                     self.scannedKey = savedKey
+                    self.model.send(message: [savedIp:savedKey])
                     self.loggedIn = true
                 }
             }

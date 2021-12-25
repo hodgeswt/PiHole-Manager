@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE0DA85427764C700031253F /* PhoneConnectivityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0DA85327764C700031253F /* PhoneConnectivityProvider.swift */; };
+		BE0DA85627764DFA0031253F /* WatchConnectivityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0DA85527764DFA0031253F /* WatchConnectivityProvider.swift */; };
 		BE1FFB792775BD9F00173287 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECB54A827758E4900BFBB71 /* WidgetKit.framework */; };
 		BE1FFB7A2775BD9F00173287 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECB54AA27758E4900BFBB71 /* SwiftUI.framework */; };
 		BE1FFB7D2775BD9F00173287 /* PiHole_Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1FFB7C2775BD9F00173287 /* PiHole_Widget.swift */; };
@@ -22,6 +24,17 @@
 		BE9DC1DB2775498400479101 /* LogOutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DC1DA2775498400479101 /* LogOutButton.swift */; };
 		BE9DC1DD2775726A00479101 /* BlacklistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DC1DC2775726A00479101 /* BlacklistView.swift */; };
 		BE9DC1DF2775734700479101 /* WhitelistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DC1DE2775734700479101 /* WhitelistView.swift */; };
+		BEB8F3EE277640AB00928CE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEB8F3ED277640AB00928CE3 /* Assets.xcassets */; };
+		BEB8F3F4277640AB00928CE3 /* PiHole-WatchOS WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BEB8F3F3277640AB00928CE3 /* PiHole-WatchOS WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		BEB8F3F9277640AB00928CE3 /* PiHole_ManagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB8F3F8277640AB00928CE3 /* PiHole_ManagerApp.swift */; };
+		BEB8F3FB277640AB00928CE3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB8F3FA277640AB00928CE3 /* ContentView.swift */; };
+		BEB8F401277640AB00928CE3 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB8F400277640AB00928CE3 /* ComplicationController.swift */; };
+		BEB8F403277640AC00928CE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEB8F402277640AC00928CE3 /* Assets.xcassets */; };
+		BEB8F406277640AC00928CE3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEB8F405277640AC00928CE3 /* Preview Assets.xcassets */; };
+		BEB8F40B277640AC00928CE3 /* PiHole Manager.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = BEB8F3EB277640AA00928CE3 /* PiHole Manager.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		BEB8F4152776419800928CE3 /* SwiftHole in Frameworks */ = {isa = PBXBuildFile; productRef = BEB8F4142776419800928CE3 /* SwiftHole */; };
+		BEB8F4172776430700928CE3 /* WatchDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB8F4162776430700928CE3 /* WatchDataView.swift */; };
+		BEB8F419277643F900928CE3 /* NotLoggedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB8F418277643F900928CE3 /* NotLoggedView.swift */; };
 		BECB54A127757EFB00BFBB71 /* SwiftHole in Frameworks */ = {isa = PBXBuildFile; productRef = BECB54A027757EFB00BFBB71 /* SwiftHole */; };
 		BED0BB922775246C0082BBF2 /* OverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED0BB912775246C0082BBF2 /* OverviewView.swift */; };
 		BED0BB95277525B50082BBF2 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = BED0BB94277525B50082BBF2 /* CodeScanner */; };
@@ -41,9 +54,45 @@
 			remoteGlobalIDString = BE1FFB772775BD9F00173287;
 			remoteInfo = "PiHole WidgetExtension";
 		};
+		BEB8F3F5277640AB00928CE3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BEE85A6E277520B400BC1823 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BEB8F3F2277640AB00928CE3;
+			remoteInfo = "PiHole-WatchOS WatchKit Extension";
+		};
+		BEB8F409277640AC00928CE3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BEE85A6E277520B400BC1823 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BEB8F3EA277640AA00928CE3;
+			remoteInfo = "PiHole-WatchOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		BEB8F40C277640AC00928CE3 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				BEB8F40B277640AC00928CE3 /* PiHole Manager.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEB8F40F277640AC00928CE3 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				BEB8F3F4277640AB00928CE3 /* PiHole-WatchOS WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BECB54BB27758E4B00BFBB71 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -58,6 +107,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BE0DA84C277649540031253F /* PiHole-WatchOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "PiHole-WatchOS.entitlements"; sourceTree = "<group>"; };
+		BE0DA84D277649650031253F /* PiHole-WatchOSRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "PiHole-WatchOSRelease.entitlements"; sourceTree = "<group>"; };
+		BE0DA84E27764A180031253F /* PiHole-WatchOS WatchKit ExtensionDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "PiHole-WatchOS WatchKit ExtensionDebug.entitlements"; sourceTree = "<group>"; };
+		BE0DA84F27764A200031253F /* PiHole-WatchOS WatchKit ExtensionRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "PiHole-WatchOS WatchKit ExtensionRelease.entitlements"; sourceTree = "<group>"; };
+		BE0DA85027764A290031253F /* PiHole-WatchOS WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "PiHole-WatchOS WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		BE0DA85327764C700031253F /* PhoneConnectivityProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneConnectivityProvider.swift; sourceTree = "<group>"; };
+		BE0DA85527764DFA0031253F /* WatchConnectivityProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivityProvider.swift; sourceTree = "<group>"; };
 		BE1FFB782775BD9F00173287 /* PiHole WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "PiHole WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE1FFB7C2775BD9F00173287 /* PiHole_Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiHole_Widget.swift; sourceTree = "<group>"; };
 		BE1FFB7E2775BD9F00173287 /* PiHole_Widget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = PiHole_Widget.intentdefinition; sourceTree = "<group>"; };
@@ -72,6 +128,17 @@
 		BE9DC1DA2775498400479101 /* LogOutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutButton.swift; sourceTree = "<group>"; };
 		BE9DC1DC2775726A00479101 /* BlacklistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlacklistView.swift; sourceTree = "<group>"; };
 		BE9DC1DE2775734700479101 /* WhitelistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhitelistView.swift; sourceTree = "<group>"; };
+		BEB8F3EB277640AA00928CE3 /* PiHole Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PiHole Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEB8F3ED277640AB00928CE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BEB8F3F3277640AB00928CE3 /* PiHole-WatchOS WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "PiHole-WatchOS WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEB8F3F8277640AB00928CE3 /* PiHole_ManagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiHole_ManagerApp.swift; sourceTree = "<group>"; };
+		BEB8F3FA277640AB00928CE3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BEB8F400277640AB00928CE3 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		BEB8F402277640AC00928CE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BEB8F405277640AC00928CE3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BEB8F407277640AC00928CE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEB8F4162776430700928CE3 /* WatchDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchDataView.swift; sourceTree = "<group>"; };
+		BEB8F418277643F900928CE3 /* NotLoggedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotLoggedView.swift; sourceTree = "<group>"; };
 		BECB54A827758E4900BFBB71 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		BECB54AA27758E4900BFBB71 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		BECB54BE27759CE200BFBB71 /* PiHole Manager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "PiHole Manager.entitlements"; sourceTree = "<group>"; };
@@ -98,6 +165,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BEB8F3F0277640AB00928CE3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEB8F4152776419800928CE3 /* SwiftHole in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BEE85A73277520B400BC1823 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -121,6 +196,43 @@
 			path = "PiHole Widget";
 			sourceTree = "<group>";
 		};
+		BEB8F3EC277640AA00928CE3 /* PiHole-WatchOS */ = {
+			isa = PBXGroup;
+			children = (
+				BE0DA84D277649650031253F /* PiHole-WatchOSRelease.entitlements */,
+				BE0DA84C277649540031253F /* PiHole-WatchOS.entitlements */,
+				BEB8F3ED277640AB00928CE3 /* Assets.xcassets */,
+			);
+			path = "PiHole-WatchOS";
+			sourceTree = "<group>";
+		};
+		BEB8F3F7277640AB00928CE3 /* PiHole-WatchOS WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				BE0DA85027764A290031253F /* PiHole-WatchOS WatchKit Extension.entitlements */,
+				BE0DA84F27764A200031253F /* PiHole-WatchOS WatchKit ExtensionRelease.entitlements */,
+				BE0DA84E27764A180031253F /* PiHole-WatchOS WatchKit ExtensionDebug.entitlements */,
+				BEB8F3F8277640AB00928CE3 /* PiHole_ManagerApp.swift */,
+				BEB8F3FA277640AB00928CE3 /* ContentView.swift */,
+				BEB8F418277643F900928CE3 /* NotLoggedView.swift */,
+				BEB8F4162776430700928CE3 /* WatchDataView.swift */,
+				BE0DA85527764DFA0031253F /* WatchConnectivityProvider.swift */,
+				BEB8F400277640AB00928CE3 /* ComplicationController.swift */,
+				BEB8F402277640AC00928CE3 /* Assets.xcassets */,
+				BEB8F407277640AC00928CE3 /* Info.plist */,
+				BEB8F404277640AC00928CE3 /* Preview Content */,
+			);
+			path = "PiHole-WatchOS WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		BEB8F404277640AC00928CE3 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				BEB8F405277640AC00928CE3 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		BECB54A727758E4900BFBB71 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +249,8 @@
 				BE1FFB8C2775BDB400173287 /* PiHole WidgetExtension.entitlements */,
 				BEE85A78277520B400BC1823 /* PiHole Manager */,
 				BE1FFB7B2775BD9F00173287 /* PiHole Widget */,
+				BEB8F3EC277640AA00928CE3 /* PiHole-WatchOS */,
+				BEB8F3F7277640AB00928CE3 /* PiHole-WatchOS WatchKit Extension */,
 				BECB54A727758E4900BFBB71 /* Frameworks */,
 				BEE85A77277520B400BC1823 /* Products */,
 			);
@@ -147,6 +261,8 @@
 			children = (
 				BEE85A76277520B400BC1823 /* PiHole Manager.app */,
 				BE1FFB782775BD9F00173287 /* PiHole WidgetExtension.appex */,
+				BEB8F3EB277640AA00928CE3 /* PiHole Manager.app */,
+				BEB8F3F3277640AB00928CE3 /* PiHole-WatchOS WatchKit Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -167,6 +283,7 @@
 				BE9DC1DE2775734700479101 /* WhitelistView.swift */,
 				BED0BB912775246C0082BBF2 /* OverviewView.swift */,
 				BE9DC1D02775392500479101 /* DataView.swift */,
+				BE0DA85327764C700031253F /* PhoneConnectivityProvider.swift */,
 				BEE85A7D277520B600BC1823 /* Assets.xcassets */,
 				BEE85A82277520B600BC1823 /* Persistence.swift */,
 				BEE85A84277520B600BC1823 /* PiHole_Manager.xcdatamodeld */,
@@ -206,6 +323,43 @@
 			productReference = BE1FFB782775BD9F00173287 /* PiHole WidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		BEB8F3EA277640AA00928CE3 /* PiHole-WatchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEB8F413277640AC00928CE3 /* Build configuration list for PBXNativeTarget "PiHole-WatchOS" */;
+			buildPhases = (
+				BEB8F3E9277640AA00928CE3 /* Resources */,
+				BEB8F40F277640AC00928CE3 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BEB8F3F6277640AB00928CE3 /* PBXTargetDependency */,
+			);
+			name = "PiHole-WatchOS";
+			productName = "PiHole-WatchOS";
+			productReference = BEB8F3EB277640AA00928CE3 /* PiHole Manager.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		BEB8F3F2277640AB00928CE3 /* PiHole-WatchOS WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEB8F412277640AC00928CE3 /* Build configuration list for PBXNativeTarget "PiHole-WatchOS WatchKit Extension" */;
+			buildPhases = (
+				BEB8F3EF277640AB00928CE3 /* Sources */,
+				BEB8F3F0277640AB00928CE3 /* Frameworks */,
+				BEB8F3F1277640AB00928CE3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PiHole-WatchOS WatchKit Extension";
+			packageProductDependencies = (
+				BEB8F4142776419800928CE3 /* SwiftHole */,
+			);
+			productName = "PiHole-WatchOS WatchKit Extension";
+			productReference = BEB8F3F3277640AB00928CE3 /* PiHole-WatchOS WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		BEE85A75277520B400BC1823 /* PiHole Manager */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BEE85A89277520B600BC1823 /* Build configuration list for PBXNativeTarget "PiHole Manager" */;
@@ -214,11 +368,13 @@
 				BEE85A73277520B400BC1823 /* Frameworks */,
 				BEE85A74277520B400BC1823 /* Resources */,
 				BECB54BB27758E4B00BFBB71 /* Embed App Extensions */,
+				BEB8F40C277640AC00928CE3 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				BE1FFB852775BDA000173287 /* PBXTargetDependency */,
+				BEB8F40A277640AC00928CE3 /* PBXTargetDependency */,
 			);
 			name = "PiHole Manager";
 			packageProductDependencies = (
@@ -240,6 +396,12 @@
 				LastUpgradeCheck = 1310;
 				TargetAttributes = {
 					BE1FFB772775BD9F00173287 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					BEB8F3EA277640AA00928CE3 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					BEB8F3F2277640AB00928CE3 = {
 						CreatedOnToolsVersion = 13.1;
 					};
 					BEE85A75277520B400BC1823 = {
@@ -266,6 +428,8 @@
 			targets = (
 				BEE85A75277520B400BC1823 /* PiHole Manager */,
 				BE1FFB772775BD9F00173287 /* PiHole WidgetExtension */,
+				BEB8F3EA277640AA00928CE3 /* PiHole-WatchOS */,
+				BEB8F3F2277640AB00928CE3 /* PiHole-WatchOS WatchKit Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -276,6 +440,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE1FFB802775BDA000173287 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEB8F3E9277640AA00928CE3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEB8F3EE277640AB00928CE3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEB8F3F1277640AB00928CE3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEB8F406277640AC00928CE3 /* Preview Assets.xcassets in Resources */,
+				BEB8F403277640AC00928CE3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +481,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BEB8F3EF277640AB00928CE3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEB8F3FB277640AB00928CE3 /* ContentView.swift in Sources */,
+				BEB8F401277640AB00928CE3 /* ComplicationController.swift in Sources */,
+				BEB8F419277643F900928CE3 /* NotLoggedView.swift in Sources */,
+				BEB8F4172776430700928CE3 /* WatchDataView.swift in Sources */,
+				BEB8F3F9277640AB00928CE3 /* PiHole_ManagerApp.swift in Sources */,
+				BE0DA85627764DFA0031253F /* WatchConnectivityProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BEE85A72277520B400BC1823 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -316,6 +510,7 @@
 				BE9DC1D32775420C00479101 /* ControlView.swift in Sources */,
 				BEE85A7A277520B400BC1823 /* PiHole_ManagerApp.swift in Sources */,
 				BE9DC1DD2775726A00479101 /* BlacklistView.swift in Sources */,
+				BE0DA85427764C700031253F /* PhoneConnectivityProvider.swift in Sources */,
 				BE9DC1D5277542AE00479101 /* TitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,6 +522,16 @@
 			isa = PBXTargetDependency;
 			target = BE1FFB772775BD9F00173287 /* PiHole WidgetExtension */;
 			targetProxy = BE1FFB842775BDA000173287 /* PBXContainerItemProxy */;
+		};
+		BEB8F3F6277640AB00928CE3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BEB8F3F2277640AB00928CE3 /* PiHole-WatchOS WatchKit Extension */;
+			targetProxy = BEB8F3F5277640AB00928CE3 /* PBXContainerItemProxy */;
+		};
+		BEB8F40A277640AC00928CE3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BEB8F3EA277640AA00928CE3 /* PiHole-WatchOS */;
+			targetProxy = BEB8F409277640AC00928CE3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -384,6 +589,122 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BEB8F40D277640AC00928CE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "PiHole-WatchOS/PiHole-WatchOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7M53NGQ966;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = PiHole_WatchOS_WatchKit_Extension;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "will-hodges.PiHole-Manager";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "will-hodges.PiHole-Manager.watchkitapp";
+				PRODUCT_NAME = "PiHole Manager";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+			};
+			name = Debug;
+		};
+		BEB8F40E277640AC00928CE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "PiHole-WatchOS/PiHole-WatchOSRelease.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7M53NGQ966;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = PiHole_WatchOS_WatchKit_Extension;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "will-hodges.PiHole-Manager";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "will-hodges.PiHole-Manager.watchkitapp";
+				PRODUCT_NAME = "PiHole Manager";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+			};
+			name = Release;
+		};
+		BEB8F410277640AC00928CE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "PiHole-WatchOS WatchKit Extension/PiHole-WatchOS WatchKit ExtensionDebug.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PiHole-WatchOS WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 7M53NGQ966;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "PiHole-WatchOS WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "PiHole-WatchOS WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "will-hodges.PiHole-Manager.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+			};
+			name = Debug;
+		};
+		BEB8F411277640AC00928CE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "PiHole-WatchOS WatchKit Extension/PiHole-WatchOS WatchKit ExtensionRelease.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PiHole-WatchOS WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 7M53NGQ966;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "PiHole-WatchOS WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "PiHole-WatchOS WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "will-hodges.PiHole-Manager.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Release;
 		};
@@ -581,6 +902,24 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		BEB8F412277640AC00928CE3 /* Build configuration list for PBXNativeTarget "PiHole-WatchOS WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEB8F410277640AC00928CE3 /* Debug */,
+				BEB8F411277640AC00928CE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEB8F413277640AC00928CE3 /* Build configuration list for PBXNativeTarget "PiHole-WatchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEB8F40D277640AC00928CE3 /* Debug */,
+				BEB8F40E277640AC00928CE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BEE85A71277520B400BC1823 /* Build configuration list for PBXProject "PiHole Manager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -622,6 +961,11 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		BE1FFB8A2775BDAC00173287 /* SwiftHole */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BECB549F27757EFB00BFBB71 /* XCRemoteSwiftPackageReference "SwiftHole" */;
+			productName = SwiftHole;
+		};
+		BEB8F4142776419800928CE3 /* SwiftHole */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BECB549F27757EFB00BFBB71 /* XCRemoteSwiftPackageReference "SwiftHole" */;
 			productName = SwiftHole;
